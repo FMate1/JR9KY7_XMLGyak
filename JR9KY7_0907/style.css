@@ -1,0 +1,22 @@
+body {
+    background-color: powderblue;
+}
+
+.fotabla {
+    text-align: center;
+    width: 100%;
+}
+
+img {
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.udv {
+    font-weight: bold;
+    font-size: 30px;
+}

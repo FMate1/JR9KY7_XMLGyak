@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT FM_kurzusfelvetel (hallgato,kurzosok)>
+	<!ATTLIST FM_kurzusfelvetel
+		tanev CDATA #Required
+		egyetem CDATA #Fixed "ME"
+	>
+	
+<!ELEMENT hallgato(hnev,szulev,szak)>
+	<!ATTLIST hallgato 
+		id CDATA #Required
+	>
+
+	

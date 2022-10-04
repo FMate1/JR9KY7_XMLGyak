@@ -7,8 +7,17 @@
 	>
 	
 <!ELEMENT hallgato(hnev,szulev,szak)>
-	<!ATTLIST hallgato 
-		id CDATA #Required
-	>
+	<!ATTLIST hallgato id CDATA #Required >
+		<!ELEMENT hnev (#PCDATA)> 
+		<!ELEMENT szulev (#PCDATA)>
+		<!ELEMENT szak (#PCDATA)>
 
-	
+<!ELEMENT kurzusok(kurzus)>
+
+<!ELEMENT kurzus(kurzusnev,kredit,hely,idopont,oktato)>
+	<!ATTLIST kurzus id CDATA #REQUIRED>
+		<!ELEMENT kurzusnev (#PCDATA)>
+		<!ELEMENT kredit (#PCDATA)>
+		<!ELEMENT hely (#PCDATA)>  
+		<!ELEMENT idopont (#PCDATA)>  
+		<!ELEMENT oktato (#PCDATA)> 

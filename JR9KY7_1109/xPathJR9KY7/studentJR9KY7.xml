@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class>
+
+	<student id = "01">
+		<keresztnev>Máté</keresztnev>
+		<vezeteknev>Fekete</vezeteknev>
+		<becenev>Mátéka</becenev>
+		<kor>20</kor>
+	</student>
+	
+	<student id = "02">
+		<keresztnev>József</keresztnev>
+		<vezeteknev>Kiss</vezeteknev>
+		<becenev>Józsi</becenev>
+		<kor>20</kor>
+	</student>
+	
+	<student id = "03">
+		<keresztnev>László</keresztnev>
+		<vezeteknev>Nagy</vezeteknev>
+		<becenev>Laci</becenev>
+		<kor>22</kor>
+	</student>
+	
+	<student id = "04">
+		<keresztnev>Péter</keresztnev>
+		<vezeteknev>Tóth</vezeteknev>
+		<becenev>Peti</becenev>
+		<kor>21</kor>
+	</student>
+
+</class>

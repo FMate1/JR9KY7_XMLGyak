@@ -71,10 +71,10 @@ public class xPathJR9KY7 {
 			//String expression = "*";
 
 			//#11
-			//String expression = "class/student[kor > 20]";
+			String expression = "class/student[kor > 20]";
 
 			//#12		
-			String expression = "class/student/keresztnév | class/student/vezetéknév";
+			//String expression = "class/student/keresztnev | class/student/vezeteknev";
 			NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
 			
 			//A for ciklus segítségével a NodeList csomópontjain végig kell iterálni

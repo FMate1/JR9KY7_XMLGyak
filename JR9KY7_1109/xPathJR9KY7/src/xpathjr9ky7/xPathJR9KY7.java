@@ -26,7 +26,7 @@ public class xPathJR9KY7 {
 		try {
 			File xmlFile = new File("studentJR9KY7.xml");
 			
-			//DocumentBuilder lÈtrehoz·sa
+			//DocumentBuilder l√©trehoz√°sa
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			
@@ -34,30 +34,61 @@ public class xPathJR9KY7 {
 			
 			document.getDocumentElement().normalize();
 			
-			//az XPath kÈszÌtÈse
+			//az XPath k√©sz√≠t√©se
 			XPath xPath = XPathFactory.newInstance().newXPath();
 			
-			//Meg kell adni az elÈrÈsi ˙t kifejezÈst Ès a csomÛpont list·t
+			//Meg kell adni az el√©r√©si √∫t kifejez√©st √©s a csom√≥pont list√°t
 			
-			//KÈszÌts¸nk egy list·t, majd az xPath kifejezÈst le kell fordÌtani Ès ki kell ÈrtÈkelni.
-			String expression1 = "/class/student";
-			String expression2 = "/class/student[2]";
-			String expression3 = "//student";
-			String expression4 = "";
-			NodeList nodeList = (NodeList) xPath.compile(expression3).evaluate(document, XPathConstants.NODESET);
+			//K√©sz√≠ts√ºnk egy list√°t, majd az xPath kifejez√©st le kell ford√≠tani √©s ki kell √©rt√©kelni.
+			//#1
+			//String expression = "class/student";
 			
-			//A for ciklus segÌtsÈgÈvel a NodeList csomÛpontjain vÈgig kell iter·lni
+			//#2
+			//String expression = "class/student[@id=2]";
+
+			//#3
+			//String expression = "//student";
+
+			//#4
+			//String expression = "class/student[position()=2]";
+
+			//#5
+			//String expression = "class/student[last()]";
+
+			//#6
+			//String expression = "class/student[last()-1]";
+
+			//#7
+			//String expression = "class/student[position()<3]";
+
+			//#8
+			//String expression = "class/*";
+
+			//#9
+			//String expression = "class/student[*]";
+
+			//#10
+			//String expression = "*";
+
+			//#11
+			//String expression = "class/student[kor > 20]";
+
+			//#12		
+			String expression = "class/student/keresztn√©v | class/student/vezet√©kn√©v";
+			NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
+			
+			//A for ciklus seg√≠ts√©g√©vel a NodeList csom√≥pontjain v√©gig kell iter√°lni
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Node node = nodeList.item(i);
 				
-				System.out.println("\nAktu·lis elem: " + node.getNodeName());
+				System.out.println("\nAktu√°lis elem: " + node.getNodeName());
 				
-				//Meg kell vizsg·lni a csomÛpontot, tesztelni kell a subelement
+				//Meg kell vizsg√°lni a csom√≥pontot, tesztelni kell a subelement
 				if (node.getNodeType() == Node.ELEMENT_NODE && node.getNodeName().equals("student")) {
 					Element element = (Element) node;
 					
-					//az id attribÛtumot ad vissza
-					System.out.println("HallgatÛ ID: " + element.getAttribute("id"));
+					//az id attrib√≥tumot ad vissza
+					System.out.println("Hallgat√≥ ID: " + element.getAttribute("id"));
 					
 					//keresztnevet ad vissza
 					System.out.println("Keresztnev: " + element.getElementsByTagName("keresztnev").item(0).getTextContent());

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<?xml-sylesheet type = "text/xsl" href = "kurzusokJR9KY7.xsl"?>
+
+<root id='JR9KY7'>
+    <vizsgak_JR9KY7>
+        <vizsga>
+            <kurzus>Adatbazisrendszerek 2</kurzus>
+            <helyszin>A2</helyszin>
+            <idopont>
+                <nap>Hetfo</nap>
+                <tol>10</tol>
+                <ig>12</ig>
+            </idopont>
+            <oktato>Dr. Kovacs Laszlo</oktato>
+            <jegy>4</jegy>
+        </vizsga>
+        <vizsga>
+            <kurzus>Java programozas</kurzus>
+            <helyszin>A1</helyszin>
+            <idopont>
+                <nap>Kedd</nap>
+                <tol>8</tol>
+                <ig>12</ig>
+            </idopont>
+            <oktato>Szucs Miklos</oktato>
+            <jegy>4</jegy>
+        </vizsga>
+    </vizsgak_JR9KY7>
+</root>

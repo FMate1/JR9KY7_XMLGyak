@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<etterem xmlns="XMLJR9KY7">
+  <pincer pID="1">
+    <nev>Kis Zoltan</nev>
+    <fizetes>240000</fizetes>
+    <kor>25</kor>
+  </pincer>
+  <pincer pID="2">
+    <nev>Nagy Albert</nev>
+    <fizetes>245000</fizetes>
+    <kor>24</kor>
+  </pincer>
+  <pincer pID="3">
+    <nev>Toth Balazs</nev>
+    <fizetes>228000</fizetes>
+    <kor>22</kor>
+  </pincer>
+  <rendeles pID="1" rID="1">
+    <etelAr>5600</etelAr>
+    <italAr>2500</italAr>
+  </rendeles>
+  <rendeles pID="2" rID="2">
+    <etelAr>4100</etelAr>
+    <italAr>1500</italAr>
+  </rendeles>
+  <rendeles pID="3" rID="3">
+    <etelAr>5900</etelAr>
+    <italAr>3500</italAr>
+  </rendeles>
+  <hozzavalo hID="1">
+    <nev>Csirkehus</nev>
+    <darabszam>2</darabszam>
+  </hozzavalo>
+  <hozzavalo hID="2">
+    <nev>Marhahus</nev>
+    <darabszam>3</darabszam>
+  </hozzavalo>
+  <hozzavalo hID="3">
+    <nev>Borjuhus</nev>
+    <darabszam>2</darabszam>
+  </hozzavalo>
+  <asztal aID="1">
+    <emelet>1</emelet>
+    <foglalt>igen</foglalt>
+    <ferohely>2</ferohely>
+  </asztal>
+  <asztal aID="2">
+    <emelet>0</emelet>
+    <foglalt>igen</foglalt>
+    <ferohely>2</ferohely>
+  </asztal>
+  <asztal aID="3">
+    <emelet>0</emelet>
+    <foglalt>igen</foglalt>
+    <ferohely>4</ferohely>
+  </asztal>
+  <kAlk kID="1">
+    <nev>Kiss Anita</nev>
+    <fizetes>290000</fizetes>
+    <kor>28</kor>
+    <telefonszam>06703579415</telefonszam>
+  </kAlk>
+  <kAlk kID="2">
+    <nev>Nagy Anita</nev>
+    <fizetes>320000</fizetes>
+    <kor>32</kor>
+    <telefonszam>06200252585</telefonszam>
+  </kAlk>
+  <kAlk kID="3">
+    <nev>Toth Anita</nev>
+    <fizetes>210000</fizetes>
+    <kor>21</kor>
+    <telefonszam>06305548644</telefonszam>
+  </kAlk>
+  <elkeszit kID="1" rID="1">
+    <ido>40</ido>
+    <sutes>igen</sutes>
+    <fozes>nem</fozes>
+  </elkeszit>
+  <elkeszit kID="2" rID="2">
+    <ido>70</ido>
+    <sutes>igen</sutes>
+    <fozes>igen</fozes>
+  </elkeszit>
+  <elkeszit kID="3" rID="3">
+    <ido>45</ido>
+    <sutes>igen</sutes>
+    <fozes>nem</fozes>
+  </elkeszit>
+  <tartalmaz hID="1" rID="1"/>
+  <tartalmaz hID="2" rID="2"/>
+  <tartalmaz hID="3" rID="3"/>
+</etterem>

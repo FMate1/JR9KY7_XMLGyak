@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:simpleType name = "idTipus">
+		<xs:restriction base = "xs:string">
+			<xs:minLength value = "1"/>
+			<xs:maxLength value = "3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name = "telszamTipus">
+		<xs:restriction base = "xs:string">
+			<xs:pattern value = "\d{11}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name = "igenNemTipus">
+		<xs:restriction base = "xs:string">
+			<xs:enumeration value = "igen"/>
+			<xs:enumeration value = "nem"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:key name = "pincer_kulcs">
+		<xs:selector xpath = "pincer"/>
+		<xs:field xpath = "@pID" />
+	</xs:key>
+	
+	<xs:key name = "rendeles_kulcs">
+		<xs:selector xpath = "rendeles"/>
+		<xs:field xpath = "@rID" />
+	</xs:key>
+	
+	<xs:key name = "hozzavalo_kulcs">
+		<xs:selector xpath = "hozzavalo"/>
+		<xs:field xpath = "@hID" />
+	</xs:key>
+	
+	<xs:key name = "asztal_kulcs">
+		<xs:selector xpath = "asztal"/>
+		<xs:field xpath = "@aID" />
+	</xs:key>
+	
+	<xs:key name = "kAlk_kulcs">
+		<xs:selector xpath = "kAlk"/>
+		<xs:field xpath = "@kID" />
+	</xs:key>
+	
+	<xs:keyref refer = "pincer_kulcs" name = "rendeles_pincer_fkey">
+		<xs:selector xpath = "rendeles" />
+		<xs:field xpath = "felvesz" />
+	</xs:keyref>
+	
+	<xs:keyref refer = "rendeles_kulcs" name = "elkeszit_rendeles_fkey">
+		<xs:selector xpath = "elkeszit" />
+		<xs:field xpath = "elkeszit_r" />
+	</xs:keyref>
+	
+	<xs:keyref refer = "kAlk_kulcs" name = "elkeszit_kAlk_fkey">
+		<xs:selector xpath = "elkeszit" />
+		<xs:field xpath = "elkeszit_k" />
+	</xs:keyref>
+	
+	<xs:keyref refer = "rendeles_kulcs" name = "tartalmaz_rendeles_fkey">
+		<xs:selector xpath = "tartalmaz" />
+		<xs:field xpath = "tartalmaz_r" />
+	</xs:keyref>
+	
+	<xs:keyref refer = "hozzavalo_kulcs" name = "tartalmaz_hozzavalo_fkey">
+		<xs:selector xpath = "tartalmaz" />
+		<xs:field xpath = "tartalmaz_h" />
+	</xs:keyref>
+	
+	<xs:element name = "etterem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref = "pincer" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "rendeles" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "asztal" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "hozzavalo" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "kAlk" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "elkeszit" maxOccurs="unbounded"></xs:element>
+				<xs:element ref = "tartalmaz" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "pincer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "nev" type = "xs:string" maxOccurs = "unbounded"/>
+				<xs:element name = "fizetes" type = "xs:integer" maxOccurs = "unbounded"/>
+				<xs:element name = "kor" type = "xs:integer" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "pID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "rendeles">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "etelAr" type = "xs:integer" maxOccurs = "unbounded"/>
+				<xs:element name = "italAr" type = "xs:integer" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "rID" type = "idTipus" use = "required"></xs:attribute>
+			<xs:attribute name = "pID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "hozzavalo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "nev" type = "xs:string" maxOccurs = "unbounded"/>
+				<xs:element name = "darabszam" type = "xs:integer" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "hID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "asztal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "emelet" type = "xs:integer" maxOccurs = "unbounded"/>	
+				<xs:element name = "foglalt" type = "igenNemTipus" maxOccurs = "unbounded"/>
+				<xs:element name = "ferohely" type = "xs:integer" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "aID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "kAlk">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "nev" type = "xs:string" maxOccurs = "unbounded"/>
+				<xs:element name = "fizetes" type = "xs:integer" maxOccurs = "unbounded"/>
+				<xs:element name = "kor" type = "xs:integer" maxOccurs = "unbounded"/>
+				<xs:element name = "telefonszam" type = "telszamTipus" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "kID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "elkeszit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "ido" type = "xs:integer" maxOccurs = "unbounded"/>	
+				<xs:element name = "sutes" type = "igenNemTipus" maxOccurs = "unbounded"/>
+				<xs:element name = "fozes" type = "igenNemTipus" maxOccurs = "unbounded"/>
+			</xs:sequence>
+			<xs:attribute name = "rID" type = "idTipus" use = "required"></xs:attribute>
+			<xs:attribute name = "kID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name = "tartalmaz">
+		<xs:complexType>
+			<xs:attribute name = "rID" type = "idTipus" use = "required"></xs:attribute>
+			<xs:attribute name = "hID" type = "idTipus" use = "required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

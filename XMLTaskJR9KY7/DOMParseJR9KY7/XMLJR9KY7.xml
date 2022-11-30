@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<etterem>
+
+	<!-- 1. feltöltés -->
+	<pincer pID = "1">
+		<nev>Kiss László</nev>
+		<fizetes>230000</fizetes>
+		<kor>23</kor>
+	</pincer>
+	
+	<rendeles rID = "1" pID = "1">
+		<etelAr>6000</etelAr>
+		<italAr>2500</italAr>
+	</rendeles>
+	
+	<hozzavalo hID = "1">
+		<nev>Burgonya</nev>
+		<darabszam>4</darabszam>
+	</hozzavalo>
+	
+	<asztal aID = "1">
+		<emelet>1</emelet>
+		<foglalt>igen</foglalt>
+		<ferohely>2</ferohely>
+	</asztal>
+	
+	<kAlk kID = "1">
+		<nev>Nagy Sándor</nev>
+		<fizetes>300000</fizetes>
+		<kor>26</kor>
+		<telefonszam>06204793472</telefonszam>
+	</kAlk>
+	
+	<elkeszit rID = "1" kID = "1">
+		<ido>40</ido>
+		<sutes>igen</sutes>
+		<fozes>igen</fozes>
+	</elkeszit>
+	
+	<tartalmaz rID = "1" hID = "1">
+	</tartalmaz>
+	
+	<!-- 2. feltöltés -->
+	<pincer pID = "2">
+		<nev>Szabó Norbert</nev>
+		<fizetes>280000</fizetes>
+		<kor>28</kor>
+	</pincer>
+	
+	<rendeles rID = "2" pID = "2">
+		<etelAr>5000</etelAr>
+		<italAr>2000</italAr>
+	</rendeles>
+	
+	<hozzavalo hID = "2">
+		<nev>Csirkehús</nev>
+		<darabszam>2</darabszam>
+	</hozzavalo>
+	
+	<asztal aID = "2">
+		<emelet>0</emelet>
+		<foglalt>igen</foglalt>
+		<ferohely>2</ferohely>
+	</asztal>
+	
+	<kAlk kID = "2">
+		<nev>Tóth József</nev>
+		<fizetes>290000</fizetes>
+		<kor>26</kor>
+		<telefonszam>06207355921</telefonszam>
+	</kAlk>
+	
+	<elkeszit rID = "2" kID = "2">
+		<ido>45</ido>
+		<sutes>igen</sutes>
+		<fozes>nem</fozes>
+	</elkeszit>
+	
+	<tartalmaz rID = "2" hID = "2">
+	</tartalmaz>
+	
+	<!-- 3. feltöltés -->
+	<pincer pID = "3">
+		<nev>Almási Péter</nev>
+		<fizetes>280000</fizetes>
+		<kor>25</kor>
+	</pincer>
+	
+	<rendeles rID = "3" pID = "3">
+		<etelAr>18000</etelAr>
+		<italAr>6500</italAr>
+	</rendeles>
+	
+	<hozzavalo hID = "3">
+		<nev>Marhahús</nev>
+		<darabszam>3</darabszam>
+	</hozzavalo>
+	
+	<asztal aID = "3">
+		<emelet>1</emelet>
+		<foglalt>igen</foglalt>
+		<ferohely>2</ferohely>
+	</asztal>
+	
+	<kAlk kID = "3">
+		<nev>Szilva Béla</nev>
+		<fizetes>310000</fizetes>
+		<kor>30</kor>
+		<telefonszam>06206395629</telefonszam>
+	</kAlk>
+	
+	<elkeszit rID = "3" kID = "3">
+		<ido>70</ido>
+		<sutes>igen</sutes>
+		<fozes>nem</fozes>
+	</elkeszit>
+	
+	<tartalmaz rID = "3" hID = "3">
+	</tartalmaz>
+
+</etterem>

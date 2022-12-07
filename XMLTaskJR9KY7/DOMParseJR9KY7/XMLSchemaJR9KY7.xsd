@@ -21,30 +21,30 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:key name = "pincer_kulcs">
+	<xs:unique name = "pincer_kulcs">
 		<xs:selector xpath = "pincer"/>
 		<xs:field xpath = "@pID" />
-	</xs:key>
+	</xs:unique>
 	
-	<xs:key name = "rendeles_kulcs">
+	<xs:unique name = "rendeles_kulcs">
 		<xs:selector xpath = "rendeles"/>
 		<xs:field xpath = "@rID" />
-	</xs:key>
+	</xs:unique>
 	
-	<xs:key name = "hozzavalo_kulcs">
+	<xs:unique name = "hozzavalo_kulcs">
 		<xs:selector xpath = "hozzavalo"/>
 		<xs:field xpath = "@hID" />
-	</xs:key>
+	</xs:unique>
 	
-	<xs:key name = "asztal_kulcs">
+	<xs:unique name = "asztal_kulcs">
 		<xs:selector xpath = "asztal"/>
 		<xs:field xpath = "@aID" />
-	</xs:key>
+	</xs:unique>
 	
-	<xs:key name = "kAlk_kulcs">
+	<xs:unique name = "kAlk_kulcs">
 		<xs:selector xpath = "kAlk"/>
 		<xs:field xpath = "@kID" />
-	</xs:key>
+	</xs:unique>
 	
 	<xs:keyref refer = "pincer_kulcs" name = "rendeles_pincer_fkey">
 		<xs:selector xpath = "rendeles" />
